@@ -14,26 +14,26 @@ def turn_file_into_list(file):
 
 
 	
-	dictionary = {}
+	ratings_by_restaurant = {}
 
 	for line in file:
 		line = line.rstrip().split(":")
 		# lst_of_restaurant_and_rating.append(line)
 		restaurant_name, rating = line
-		dictionary[restaurant_name] = rating
+		ratings_by_restaurant[restaurant_name] = rating
 	# print(dictionary)
 
-	new_dictionary = []
-	for item in dictionary:
+	restaurants = []
+	for item in ratings_by_restaurant:
 		
-		new_dictionary.append(item)
+		restaurants.append(item)
 
 
-	sorted_dictionary = sorted(new_dictionary)
+	sorted_restaurants = sorted(restaurants)
 	# print(sorted_dictionary)
 
-	for key in sorted_dictionary:
-		print("{} is rated at {}".format(key, dictionary[key]))
+	for key in sorted_restaurants:
+		print("{} is rated at {}".format(key, ratings_by_restaurant[key]))
 
 	# sorted_lst_of_restaurant_and_rating = sorted(lst_of_restaurant_and_rating)
 
